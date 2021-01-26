@@ -4,8 +4,12 @@ inputs:
   documents:
     description: The directory to find TeX documents in
     required: true
+  target:
+    description: The directory to put generated files
+    required: true
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.documents }}
+    - ${{ inputs.target }}
