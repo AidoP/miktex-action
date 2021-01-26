@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pdflatex $1
+pdflatex "$1"
 
-cat /miktex/.miktex/texmfs/data/miktex/log/pdflatex.log
+# cat /miktex/.miktex/texmfs/data/miktex/log/pdflatex.log
