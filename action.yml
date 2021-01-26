@@ -2,7 +2,7 @@ name: MikTeX
 description: MixTeX in GitHub Actions
 inputs:
   documents:
-    description: The TeX documents to operate on
+    description: The directory to find TeX documents in
     required: true
 runs:
   using: docker
