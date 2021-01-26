@@ -1,6 +1,5 @@
 FROM miktex/miktex
 
-# COPY entrypoint.sh /entrypoint.sh
 
 # RUN cat miktex
 
@@ -9,4 +8,5 @@ COPY --chown=miktex:miktex * /miktex/
 RUN chmod -R 777 /miktex/
 USER miktex:miktex
 WORKDIR /miktex
+COPY --chown=miktex:miktex entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
