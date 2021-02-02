@@ -1,8 +1,8 @@
-name: MikTeX
-description: MixTeX in GitHub Actions
+name: Tectonic
+description: Build TeX/LaTeX documents with Tectonic
 inputs:
-  documents:
-    description: The directory to find TeX documents in
+  src:
+    description: The directory to recursively find TeX documents in
     required: true
   target:
     description: The directory to put generated files
@@ -11,5 +11,5 @@ runs:
   using: docker
   image: Dockerfile
   args:
-    - ${{ inputs.documents }}
+    - ${{ inputs.src }}
     - ${{ inputs.target }}
