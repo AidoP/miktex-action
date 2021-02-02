@@ -1,4 +1,4 @@
-FROM rustlang/rust
+FROM rust
 
 RUN cargo install tectonic
 COPY entrypoint.sh /entrypoint.sh
