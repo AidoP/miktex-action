@@ -9,7 +9,8 @@ inputs:
     required: true
 runs:
   using: docker
-  image: Dockerfile
+  image: docker://voidlinux/masterdir-x86_64
+  entrypoint: entrypoint.sh
   args:
     - ${{ inputs.src }}
     - ${{ inputs.target }}
