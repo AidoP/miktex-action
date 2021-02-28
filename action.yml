@@ -7,9 +7,13 @@ inputs:
   target:
     description: The directory to put generated files
     required: true
+  code:
+    description: The directory containing code snippets to process
+    required: false
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.src }}
     - ${{ inputs.target }}
+    - ${{ inputs.code }}
